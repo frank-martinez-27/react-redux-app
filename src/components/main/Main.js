@@ -103,8 +103,8 @@ const Main = (props) => (
         </ul>
         <div className="collapse navbar-collapse navbar-ex1-collapse">
           <ul className="nav navbar-nav side-nav">
-            <li className="active">
-              <NavLink to="home.html"><i className="fa fa-fw fa-dashboard" /> Dashboard</NavLink>
+            <li>
+              <NavLink to="home.html" activeClassName="active"><i className="fa fa-fw fa-dashboard" /> Dashboard</NavLink>
             </li>
             <li>
               <NavLink to="charts.html"><i className="fa fa-fw fa-bar-chart-o" /> Charts</NavLink>
