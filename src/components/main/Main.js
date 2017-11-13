@@ -134,6 +134,8 @@ const Main = (props) => (
             </li>
             <li>
               <NavLink to="/about"><i className="fa fa-fw fa-file" /> About</NavLink>
+            </li><li>
+              <NavLink to="/courses"><i className="fa fa-fw fa-file" /> Courses</NavLink>
             </li>
             <li>
               <NavLink to="/index-rtl.html"><i className="fa fa-fw fa-dashboard" /> RTL Dashboard</NavLink>
