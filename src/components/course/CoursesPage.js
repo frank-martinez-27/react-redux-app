@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as courseActions from '../actions/courseActions';
 
@@ -18,9 +19,11 @@ class CoursesPage extends React.Component {
     this.setState({ course: course });
   }
   onClickSave() {
-    this.props.dispatch(courseActions.createCourse(this.state.course));
+    //this.props.dispatch(courseActions.createCourse(this.state.course));
+    //this.props.createCourse(this.state.course);
+    this.props.actions.createCourse(this.state.course);
   }
-  courseRow(course,idx){
+  courseRow(course, idx) {
     return <div key={idx}>{course.title}</div>;
   }
   render() {
@@ -45,10 +48,16 @@ class CoursesPage extends React.Component {
     );
   }
 }
+
 function mapStateToProps(state, ownProps) {
   return {
     courses: state.courses //state.courses is the same name as in the reducer's index.js
   };
 }
-
-export default connect(mapStateToProps)(CoursesPage);
+function mapDispatchToProps(dispatch) {
+  return {
+    //createCourse: course => dispatch(courseActions.createCourse(course))
+    actions: bindActionCreators(courseActions, dispatch)
+  };
+}
+export default connect(mapStateToProps, mapDispatchToProps)(CoursesPage);
