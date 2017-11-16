@@ -125,10 +125,19 @@ const Main = (props) => (
               <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i className="fa fa-fw fa-arrows-v" /> Dropdown <i className="fa fa-fw fa-caret-down" /></a>
               <ul id="demo" className="collapse">
                 <li>
-                  <NavLink to="#">Dropdown Item</NavLink>
+                  <NavLink to="/itunes">Search on iTunes...</NavLink>
                 </li>
                 <li>
-                  <NavLink to="#">Dropdown Item</NavLink>
+                  <NavLink to="/countdown">Countdown Timer</NavLink>
+                </li>
+                <li>
+                  <NavLink to="#">Redux Authentication</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/binding">Data Binding</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/stock">Stock Data Viewer and Filter</NavLink>
                 </li>
               </ul>
             </li>
